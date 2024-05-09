@@ -20,7 +20,7 @@ It is pre-setup with everything needed to make a USB MIDI controller and can be 
 
 ## Dependencies
 
-You need to have platformio installed to make use of this. I prefer using the command line version.
+You need to have platformio installed to make use of this.
 
 Install it on MacOS by running homebrew:
 
