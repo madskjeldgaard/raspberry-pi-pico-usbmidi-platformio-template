@@ -2,9 +2,18 @@
 #include <Adafruit_TinyUSB.h>
 #include <MIDI.h>
 
+// Smooth buttons and potentiometers, see the libraries for examples on how to use them.
+#include <Bounce2.h>
+#include <ResponsiveAnalogRead.h>
+
 // USB MIDI object
 Adafruit_USBD_MIDI usbMidi;
 MIDI_CREATE_INSTANCE(Adafruit_USBD_MIDI, usbMidi, MIDI);
+
+// Example of handling midi input to the device
+void handle_midi_note_on(byte channel, byte note, byte velocity) {
+  Serial.println("Got note on!");
+}
 
 void setup() {
   Serial.begin(115200);
@@ -16,12 +25,17 @@ void setup() {
   usbMidi.begin();
   MIDI.begin();
 
+  // Set the MIDI note on handling function
+  MIDI.setHandleNoteOn(handle_midi_note_on);
+
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, 1);
 }
 
 auto pastLEDState = true;
 void loop() {
+  MIDI.read();
+  
   Serial.println("Hello from da loop!");
 
   // Blink the LED
