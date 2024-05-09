@@ -12,6 +12,17 @@ The advantage of working with the Pico like this is that you are able to use it 
 
 Best of all though? You can upload to the board without having to plug/unplug the device while pressing the boot button.
 
+## Features
+
+- Platformio-based – easy to compile and upload, gets dependencies automatically
+- Has common libraries set up:
+  - Bounce2 for debouncing button presses
+  - ResponsiveAnalogRead for smoother readings of analog voltages / potentiometers
+  - Adafruit MIDI library
+  - TINYUSB for USB Midi
+- C++17, allowing a lot of modern C++ tricks.
+- VSCode tasks are included making building easy in VSCode and in NeoVim (using the Overseer plugin)
+
 ## Dependencies
 
 You need to have platformio installed to make use of this. I prefer using the command line version.
