@@ -1,6 +1,6 @@
 [![PlatformIO CI](https://github.com/madskjeldgaard/raspberry-pi-pico-usbmidi-platformio-template/actions/workflows/build.yml/badge.svg)](https://github.com/madskjeldgaard/raspberry-pi-pico-usbmidi-platformio-template/actions/workflows/build.yml)
 
-# A USB MIDI thing made with Raspberry Pi Pico and Platformio
+# A USB MIDI thing made
 
 A simple template for creating an Arduino-based project for the Raspberry Pi Pico using platformio.
 
