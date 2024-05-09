@@ -16,6 +16,7 @@ It is pre-setup with everything needed to make a USB MIDI controller and can be 
   - TINYUSB for USB Midi
 - C++17, allowing a lot of modern C++ tricks.
 - VSCode tasks are included making building easy in VSCode and in NeoVim (using the Overseer plugin)
+- A Github Action which runs every time you push code to test if your firmware still compiles.
 
 ## Dependencies
 
