@@ -25,6 +25,9 @@ void setup() {
   usbMidi.begin();
   MIDI.begin();
 
+  // Turn midi thru off
+  MIDI.turnThruOff();
+
   // Set the MIDI note on handling function
   MIDI.setHandleNoteOn(handle_midi_note_on);
 
